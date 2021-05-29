@@ -48,16 +48,19 @@ class Counter extends Component {
             {/* { this.state.tags.length === 0 && 'Please create a new tag'}
             {this.renderTags()}; */}
                 
-                <span  className={this.getBadgeClasses()} >{this.formatCount()}</span>  
+                <span  
+                    className={this.getBadgeClasses()} 
+                    >{this.formatCount()}</span>  
+                    
                 <button 
-                    onClick={() => this.props.onIncrement(this.props.counter)} 
+                    onClick={() => this.props.onIncrement(this.props.counter)}
                     className="btn btn-secondary btn-sm"
                 >Increment</button>
 
-                <button 
-                    onClick={() => this.handleReduce() } 
+                {/* <button 
+                    
                     className="btn btn-secondary btn-sm m-2"
-                >Increment</button>
+                >Not Increment</button> */}
 
                 <buton 
                     onClick={() => this.props.onDelete(this.props.counter.id)} 
